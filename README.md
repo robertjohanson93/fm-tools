@@ -11,9 +11,8 @@ FM Tools is a web app with helpful tools you can use when you play Football Mana
 -  **Shadcn UI**: Shadcn UI provides a set of UI components to facilitate the development of interactive and visually appealing user interfaces.
 
 ## Roadmap
-- [] **Wage structure overview**: Export a view from FM23, upload the file to this website, get a nice overview of your club wages based on contract lengths, promised playing time etc.
-- [] **TBD**
-
+ - [] **Wage structure overview**: Export a view from FM23, upload the file to this website, get a nice overview of your club wages based on contract lengths, promised playing time etc.
+ - [X] **TBD**
 ## Installation
 To install and run FM Tools on your local machine, follow these steps:
 
