@@ -11,7 +11,7 @@ FM Tools is a web app with helpful tools you can use when you play Football Mana
 -  **Shadcn UI**: Shadcn UI provides a set of UI components to facilitate the development of interactive and visually appealing user interfaces.
 
 ## Roadmap
- - [ ] **Calculate coach start**: Calculate how many stars your coach will have in training.
+ - [ ] **Calculate coach stars**: Calculate how many stars your coach will have in training.
  - [ ] **Wage structure overview**: Export a view from FM23, upload the file to this website, get a nice overview of your club wages based on contract lengths, promised playing time etc.
  - [ ] **TBD**
 ## Installation
