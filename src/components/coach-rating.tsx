@@ -11,30 +11,30 @@ function CoachRating({ label, value }: CoachRatingProps): JSX.Element {
     <div className='flex justify-between'>
       <span className='text-sm'>{label}</span>
       <span className='flex'>
-        {value < 30 ? (
-          <Star className='fill-gray-300' color='#d1d5db' />
-        ) : (
+        {value >= 0 ? (
           <Star className='fill-amber-300' color='#fcd34d' />
+        ) : (
+          <Star className='fill-gray-300' color='#d1d5db' />
         )}
-        {value < 90 ? (
-          <Star className='fill-gray-300' color='#d1d5db' />
-        ) : (
+        {value >= 20 ? (
           <Star className='fill-amber-300' color='#fcd34d' />
+        ) : (
+          <Star className='fill-gray-300' color='#d1d5db' />
         )}
-        {value < 150 ? (
-          <Star className='fill-gray-300' color='#d1d5db' />
-        ) : (
+        {value >= 40 ? (
           <Star className='fill-amber-300' color='#fcd34d' />
+        ) : (
+          <Star className='fill-gray-300' color='#d1d5db' />
         )}
-        {value < 210 ? (
-          <Star className='fill-gray-300' color='#d1d5db' />
-        ) : (
+        {value >= 60 ? (
           <Star className='fill-amber-300' color='#fcd34d' />
+        ) : (
+          <Star className='fill-gray-300' color='#d1d5db' />
         )}
-        {value < 270 ? (
-          <Star className='fill-gray-300' color='#d1d5db' />
-        ) : (
+        {value >= 80 ? (
           <Star className='fill-amber-300' color='#fcd34d' />
+        ) : (
+          <Star className='fill-gray-300' color='#d1d5db' />
         )}
       </span>
     </div>

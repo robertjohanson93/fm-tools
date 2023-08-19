@@ -1,43 +1,22 @@
 type CoachingValuesState = Record<string, number>;
 
 export const calculateGkShotRating = (coachingValues: CoachingValuesState) => {
-  const {
-    distribution,
-    handling,
-    shotStopping,
-    tactical,
-    determination,
-    discipline,
-    motivating
-  } = coachingValues;
+  const { shotStopping, determination, discipline, motivating } =
+    coachingValues;
 
   const newValue =
-    distribution +
-    handling +
-    shotStopping * 8 +
-    tactical * 3 +
-    (determination + discipline + motivating * 3);
+    shotStopping * 3 + (determination + discipline + motivating) / 2;
 
   return newValue;
 };
 
 export const calculateGkHandRating = (coachingValues: CoachingValuesState) => {
-  const {
-    distribution,
-    handling,
-    shotStopping,
-    technical,
-    determination,
-    discipline,
-    motivating
-  } = coachingValues;
+  const { distribution, handling, determination, discipline, motivating } =
+    coachingValues;
 
   const newValue =
-    distribution +
-    handling +
-    shotStopping * 8 +
-    technical * 3 +
-    (determination + discipline + motivating * 3);
+    ((distribution + handling) / 2) * 3 +
+    (determination + discipline + motivating) / 2;
 
   return newValue;
 };
@@ -46,39 +25,53 @@ export const calculateDefTacRating = (coachingValues: CoachingValuesState) => {
   const { tactical, defending, determination, discipline, motivating } =
     coachingValues;
 
-  const newValue = tactical * 2 + (determination + discipline + motivating);
+  const newValue =
+    ((tactical + defending) / 2) * 3 +
+    (determination + discipline + motivating) / 2;
 
   return newValue;
 };
 
 export const calculateDefTechRating = (coachingValues: CoachingValuesState) => {
-  const { tactical, determination, discipline, motivating } = coachingValues;
+  const { technical, defending, determination, discipline, motivating } =
+    coachingValues;
 
-  const newValue = tactical * 2 + (determination + discipline + motivating);
+  const newValue =
+    ((technical + defending) / 2) * 3 +
+    (determination + discipline + motivating) / 2;
 
   return newValue;
 };
 
 export const calculateAttTacRating = (coachingValues: CoachingValuesState) => {
-  const { tactical, determination, discipline, motivating } = coachingValues;
+  const { tactical, attacking, determination, discipline, motivating } =
+    coachingValues;
 
-  const newValue = tactical * 2 + (determination + discipline + motivating);
+  const newValue =
+    ((tactical + attacking) / 2) * 3 +
+    (determination + discipline + motivating) / 2;
 
   return newValue;
 };
 
 export const calculateAttTechRating = (coachingValues: CoachingValuesState) => {
-  const { tactical, determination, discipline, motivating } = coachingValues;
+  const { technical, attacking, determination, discipline, motivating } =
+    coachingValues;
 
-  const newValue = tactical * 2 + (determination + discipline + motivating);
+  const newValue =
+    ((technical + attacking) / 2) * 3 +
+    (determination + discipline + motivating) / 2;
 
   return newValue;
 };
 
 export const calculatePossTacRating = (coachingValues: CoachingValuesState) => {
-  const { tactical, determination, discipline, motivating } = coachingValues;
+  const { tactical, mental, determination, discipline, motivating } =
+    coachingValues;
 
-  const newValue = tactical * 2 + (determination + discipline + motivating);
+  const newValue =
+    ((tactical + mental) / 2) * 3 +
+    (determination + discipline + motivating) / 2;
 
   return newValue;
 };
@@ -86,9 +79,12 @@ export const calculatePossTacRating = (coachingValues: CoachingValuesState) => {
 export const calculatePossTechRating = (
   coachingValues: CoachingValuesState
 ) => {
-  const { tactical, determination, discipline, motivating } = coachingValues;
+  const { tactical, mental, determination, discipline, motivating } =
+    coachingValues;
 
-  const newValue = tactical * 2 + (determination + discipline + motivating);
+  const newValue =
+    ((tactical + mental) / 2) * 3 +
+    (determination + discipline + motivating) / 2;
 
   return newValue;
 };
@@ -96,7 +92,7 @@ export const calculatePossTechRating = (
 export const calculateFitStrRating = (coachingValues: CoachingValuesState) => {
   const { fitness, determination, discipline, motivating } = coachingValues;
 
-  const newValue = fitness * 9 + (determination + discipline + motivating) * 2;
+  const newValue = fitness * 3 + (determination + discipline + motivating) / 2;
 
   return newValue;
 };
@@ -106,7 +102,7 @@ export const calculateFitQuickRating = (
 ) => {
   const { fitness, determination, discipline, motivating } = coachingValues;
 
-  const newValue = fitness * 9 + (determination + discipline + motivating) * 2;
+  const newValue = fitness * 3 + (determination + discipline + motivating) / 2;
 
   return newValue;
 };
