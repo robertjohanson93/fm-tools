@@ -1,4 +1,3 @@
-import Dashboard from '@/components/dashboard';
 import {
   Card,
   CardContent,
@@ -6,9 +5,7 @@ import {
   CardHeader,
   CardTitle
 } from '@/components/ui/card';
-import { ArrowRight, PoundSterling } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -31,7 +28,13 @@ export default function Home() {
             <Card>
               <CardHeader>
                 <CardTitle>
-                  <a href='/coaches' className='flex justify-between hover:underline'>Coacing Stars<ArrowRight /></a>
+                  <a
+                    href='/coaches'
+                    className='flex justify-between hover:underline'
+                  >
+                    Coacing Stars
+                    <ArrowRight />
+                  </a>
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -44,12 +47,19 @@ export default function Home() {
             <Card>
               <CardHeader>
                 <CardTitle>
-                  <a href='/wages' className='flex justify-between hover:underline'>Wage Structure<ArrowRight /></a>
+                  <a
+                    href='/wages'
+                    className='flex justify-between hover:underline'
+                  >
+                    Wage Structure
+                    <ArrowRight />
+                  </a>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Import your players from the game and set a wage structure to help keep your clubs finances in check.
+                  Import your players from the game and set a wage structure to
+                  help keep your clubs finances in check.
                 </CardDescription>
               </CardContent>
             </Card>
