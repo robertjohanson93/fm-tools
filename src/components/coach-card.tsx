@@ -20,10 +20,10 @@ function CoachCard({ coachingRating, coachingValues }: CoachCardProps) {
     defTechRating,
     fitQuickRating,
     fitStrRating,
-    possTacRating,
-    possTechRating,
     attTacRating,
-    attTechRating
+    attTechRating,
+    possTacRating,
+    possTechRating
   } = coachingRating;
 
   const {
@@ -71,8 +71,8 @@ function CoachCard({ coachingRating, coachingValues }: CoachCardProps) {
             <CardTitle>Defending</CardTitle>
           </CardHeader>
           <CardContent>
-            <CoachRating label='Tactical' value={3} />
-            <CoachRating label='Technical' value={4} />
+            <CoachRating label='Tactical' value={defTacRating} />
+            <CoachRating label='Technical' value={defTechRating} />
           </CardContent>
         </Card>
         <Card>
@@ -80,8 +80,8 @@ function CoachCard({ coachingRating, coachingValues }: CoachCardProps) {
             <CardTitle>Attacking</CardTitle>
           </CardHeader>
           <CardContent>
-            <CoachRating label='Tactical' value={3} />
-            <CoachRating label='Technical' value={4} />
+            <CoachRating label='Tactical' value={attTacRating} />
+            <CoachRating label='Technical' value={attTechRating} />
           </CardContent>
         </Card>
         <Card>
@@ -89,8 +89,8 @@ function CoachCard({ coachingRating, coachingValues }: CoachCardProps) {
             <CardTitle>Possession</CardTitle>
           </CardHeader>
           <CardContent>
-            <CoachRating label='Tactical' value={3} />
-            <CoachRating label='Technical' value={4} />
+            <CoachRating label='Tactical' value={possTacRating} />
+            <CoachRating label='Technical' value={possTechRating} />
           </CardContent>
         </Card>
         <Card>
