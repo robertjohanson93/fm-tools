@@ -12,7 +12,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <main className='flex min-h-screen w-full flex-col justify-center p-4 gap-12'>
+        <main className='flex min-h-screen w-full flex-col justify-center p-4 gap-6'>
           <nav className='flex gap-6 border-b pb-4'>
             <a href='/' className='text-sm font-semibold hover:underline'>
               Start
