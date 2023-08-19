@@ -12,15 +12,18 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <main className='flex min-h-screen w-full flex-col justify-center p-4 gap-12'>
-          <nav className='flex gap-6'>
-            <a href='/' className='hover:underline'>
+        <main className='flex min-h-screen w-full flex-col items-center justify-center p-4 gap-6'>
+          <nav className='flex gap-6 border-b pb-4'>
+            <a href='/' className='text-sm font-semibold hover:underline'>
               Start
             </a>
-            <a href='/coaches' className='hover:underline'>
-              Calculate Coacing Stars
+            <a
+              href='/coaches'
+              className='text-sm font-semibold hover:underline'
+            >
+              Coacing Stars
             </a>
-            <a href='/wages' className='hover:underline'>
+            <a href='/wages' className='text-sm font-semibold hover:underline'>
               Wage Structure
             </a>
           </nav>
