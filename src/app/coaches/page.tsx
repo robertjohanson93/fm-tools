@@ -88,23 +88,25 @@ export default function Coaches() {
       <div>
         <h1 className='scroll-m-20 lg:text-5xl'>Calculate Coaching Stars</h1>
         <p className='leading-7 [&:not(:first-child)]:mt-6 [&:not(:last-child)]:mb-6'>
-          Use this tool to calculate how many stars your coaches will have in
-          training.
+          Calculate how many stars your coaches will have when you assign them
+          to different training areas.
         </p>
       </div>
-      <div className='w-full lg:max-w-[75%] flex flex-col gap-6'>
-        <CoachForm
-          coachingRating={coachingRating}
-          updateCoachingRating={updateCoachingRating}
-          coachingValues={coachingValues}
-          updateCoachingValues={updateCoachingValues}
-        />
-      </div>
-      <div className='w-full lg:max-w-[75%] flex flex-col gap-6'>
-        <CoachCard
-          coachingRating={coachingRating}
-          coachingValues={coachingValues}
-        />
+      <div className='grid grid-cols-1 2xl:grid-cols-2 gap-4 w-full'>
+        <div className='flex flex-col gap-6'>
+          <CoachForm
+            coachingRating={coachingRating}
+            updateCoachingRating={updateCoachingRating}
+            coachingValues={coachingValues}
+            updateCoachingValues={updateCoachingValues}
+          />
+        </div>
+        <div className='flex flex-col gap-6'>
+          <CoachCard
+            coachingRating={coachingRating}
+            coachingValues={coachingValues}
+          />
+        </div>
       </div>
     </section>
   );

@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { Calculator, RefreshCw } from 'lucide-react';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
@@ -96,11 +97,11 @@ function CoachForm({
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className='p-8 pt-6 space-y-8 rounded-[0.5rem] border bg-background shadow'
+        className='p-4 md:p-8 space-y-8 rounded-[0.5rem] border bg-background shadow'
       >
         <div className='grid grid-cols-2 gap-4'>
           <div className='grid gap-2'>
-            <h3 className='scroll-m-20'>Coaching</h3>
+            <h3 className='scroll-m-20 text-lg md:text-2xl'>Coaching</h3>
             <FormField
               control={form.control}
               name='attacking'
@@ -217,7 +218,7 @@ function CoachForm({
             />
           </div>
           <div className='grid gap-2'>
-            <h3 className='scroll-m-20'>Mental & GK Coaching</h3>
+            <h3 className='scroll-m-20 text-lg md:text-2xl'>Mental & GK</h3>
             <FormField
               control={form.control}
               name='determination'
@@ -334,7 +335,10 @@ function CoachForm({
             />
           </div>
         </div>
-        <Button type='submit'>Submit</Button>
+        <Button type='submit'>
+          <span className='mr-2'>Calculate</span>
+          <RefreshCw size={16} />
+        </Button>
       </form>
     </Form>
   );

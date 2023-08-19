@@ -42,9 +42,9 @@ function CoachCard({ coachingRating, coachingValues }: CoachCardProps) {
   } = coachingValues;
 
   return (
-    <div className='p-8 pt-6 space-y-8 rounded-[0.5rem] border bg-background shadow'>
-      <div className='grid grid-cols-3 grid-rows-2 gap-2'>
-        <Card className='flex items-center justify-center'>
+    <div className='p-4 sm:p-6 md:p-8 space-y-8 rounded-[0.5rem] border bg-background shadow'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-2 gap-2'>
+        <Card className='hidden sm:flex items-center justify-center'>
           <CardHeader>
             <UserCircle2 color='#6b7280' size={64} />
           </CardHeader>
