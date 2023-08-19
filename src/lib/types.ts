@@ -1,6 +1,6 @@
 export interface Player {
-   player: string;
-   position: string;
-   playingTime: string;
-   salary: string;
+  player: string;
+  position: string;
+  playingTime: string;
+  salary: string;
 }
