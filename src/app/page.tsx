@@ -32,7 +32,7 @@ export default function Home() {
                     href='/coaches'
                     className='flex justify-between hover:underline'
                   >
-                    Coacing Stars
+                    Coaching Stars
                     <ArrowRight />
                   </a>
                 </CardTitle>

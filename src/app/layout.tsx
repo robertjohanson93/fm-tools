@@ -21,7 +21,7 @@ export default function RootLayout({
               href='/coaches'
               className='text-sm font-semibold hover:underline'
             >
-              Coacing Stars
+              Coaching Stars
             </a>
             <a href='/wages' className='text-sm font-semibold hover:underline'>
               Wage Structure
