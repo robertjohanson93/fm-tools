@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from '@/components/ui/badge';
 import {
   Card,
   CardContent,
@@ -12,12 +12,17 @@ export default function Home() {
   return (
     <div className='flex min-h-screen flex-col items-start gap-6'>
       <section>
-        <h1 className='scroll-m-20 lg:text-5xl relative'>FM Tools<Badge variant="default" className='absolute top-0 ml-2'>Beta</Badge></h1>
-        <p className='leading-7 [&:not(:first-child)]:mt-6 [&:not(:last-child)]:mb-6 lg:w-2/3'>
+        <h1 className='scroll-m-20 lg:text-5xl relative'>
+          FM Tools
+          <Badge variant='default' className='absolute top-0 ml-2'>
+            Beta
+          </Badge>
+        </h1>
+        <p className='leading-7 [&:not(:first-child)]:mt-6 [&:not(:last-child)]:mb-6 2xl:w-2/3'>
           Welcome to FM Tools, gathering different tools you can use while
           playing Football Manager!
         </p>
-        <p className='leading-7 [&:not(:first-child)]:mt-6 [&:not(:last-child)]:mb-6 lg:w-2/3'>
+        <p className='leading-7 [&:not(:first-child)]:mt-6 [&:not(:last-child)]:mb-6 2xl:w-2/3'>
           This is a project started after trying out a lot of different ways to
           enhance a Football Manager save. After growing tired of the different
           options and long lists not optimized for your club, I wanted to build
@@ -25,7 +30,7 @@ export default function Home() {
           in FM23.
         </p>
       </section>
-      <section className='grid sm:grid-cols-2 gap-4 lg:w-1/2'>
+      <section className='grid sm:grid-cols-2 gap-4 xl:w-1/2'>
         <Card>
           <CardHeader>
             <CardTitle>
