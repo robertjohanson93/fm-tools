@@ -4,7 +4,10 @@
 
 FM Tools is a web app with helpful tools you can use when you play Football Manager.
 
-[!IMPORTANT]
+[!IMPORTANT]<br>
+This app is a work in progress. See the roadmap below for completed features and what's to come.
+
+**Important**<br>
 This app is a work in progress. See the roadmap below for completed features and what's to come.
 
 ## Features
@@ -13,11 +16,15 @@ This app is a work in progress. See the roadmap below for completed features and
 - Written in **TypeScript**
 - Styled using **Tailwind CSS**
 - UI Components from [**Shadcn UI**](https://ui.shadcn.com/)
+- Form validations using Zod
 
 ## Note on Performance
 
-[!WARNING]
-This app is using the unstable releases for Next.js 13 and React 18. The new router and app dir is still in beta and not production-ready. 
+[!WARNING]<br>
+This app is using the unstable releases for Next.js 13 and React 18. The new router and app dir is still in beta and not production-ready.
+
+**Important**<br>
+This app is using the unstable releases for Next.js 13 and React 18. The new router and app dir is still in beta and not production-ready.
 
 ## Roadmap
 
@@ -42,8 +49,6 @@ To install and run FM Tools on your local machine, follow these steps:
 3. Install dependencies: `npm install`
 4. Start the development server: `npm run dev`
 5. Open your web browser and visit `http://localhost:3000`
-
-**Happy football managing!**
 
 ## License
 
