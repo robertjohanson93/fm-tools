@@ -7,36 +7,32 @@ interface CoachRatingProps {
 }
 
 function CoachRating({ label, value }: CoachRatingProps): JSX.Element {
+  const stars = [];
+  const fullStars = Math.floor(value);
+  const hasHalfStar = value % 1 !== 0;
+
+  for (let i = 0; i < 5; i++) {
+    if (i < fullStars) {
+      stars.push(<Star key={i} className='fill-amber-300' color='#fcd34d' />);
+    } else if (i === fullStars && hasHalfStar) {
+      stars.push(
+        <div key={i} className='relative'>
+          <StarHalf className='fill-amber-300' color='#fcd34d' />
+          <StarHalf
+            className='fill-gray-300 -scale-x-100 absolute top-0'
+            color='#d1d5db'
+          />
+        </div>
+      );
+    } else {
+      stars.push(<Star key={i} className='fill-gray-300' color='#d1d5db' />);
+    }
+  }
+
   return (
     <div className='flex justify-between'>
       <span className='text-sm'>{label}</span>
-      <span className='flex'>
-        {value >= 0 ? (
-          <Star className='fill-amber-300' color='#fcd34d' />
-        ) : (
-          <Star className='fill-gray-300' color='#d1d5db' />
-        )}
-        {value >= 20 ? (
-          <Star className='fill-amber-300' color='#fcd34d' />
-        ) : (
-          <Star className='fill-gray-300' color='#d1d5db' />
-        )}
-        {value >= 40 ? (
-          <Star className='fill-amber-300' color='#fcd34d' />
-        ) : (
-          <Star className='fill-gray-300' color='#d1d5db' />
-        )}
-        {value >= 60 ? (
-          <Star className='fill-amber-300' color='#fcd34d' />
-        ) : (
-          <Star className='fill-gray-300' color='#d1d5db' />
-        )}
-        {value >= 80 ? (
-          <Star className='fill-amber-300' color='#fcd34d' />
-        ) : (
-          <Star className='fill-gray-300' color='#d1d5db' />
-        )}
-      </span>
+      <span className='flex'>{stars}</span>
     </div>
   );
 }

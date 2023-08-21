@@ -46,14 +46,14 @@ function CoachCard({ coachingRating, coachingValues }: CoachCardProps) {
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-2 gap-2'>
         <Card className='hidden sm:flex items-center justify-center'>
           <CardHeader>
-            <UserCircle2 color='#6b7280' size={64} />
+            <UserCircle2 color='#7c3aed' size={64} />
           </CardHeader>
           <CardContent className='pt-6'>
             <div className='grid gap-2'>
-              <div className='bg-gray-500 w-24 h-3 rounded-[0.2rem]'></div>
-              <div className='bg-gray-500 w-12 h-3 rounded-[0.2rem]'></div>
-              <div className='bg-gray-500 w-10 h-3 rounded-[0.2rem]'></div>
-              <div className='bg-gray-500 w-16 h-3 rounded-[0.2rem]'></div>
+              <div className='bg-[#7c3aed] w-24 h-3 rounded-[0.2rem]'></div>
+              <div className='bg-[#7c3aed] w-12 h-3 rounded-[0.2rem]'></div>
+              <div className='bg-[#7c3aed] w-10 h-3 rounded-[0.2rem]'></div>
+              <div className='bg-[#7c3aed] w-16 h-3 rounded-[0.2rem]'></div>
             </div>
           </CardContent>
         </Card>

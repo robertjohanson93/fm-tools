@@ -336,8 +336,8 @@ function CoachForm({
           </div>
         </div>
         <Button type='submit'>
-          <span className='mr-2'>Calculate</span>
           <RefreshCw size={16} />
+          <span className='ml-2'>Calculate</span>
         </Button>
       </form>
     </Form>
