@@ -24,7 +24,7 @@ export default function Home() {
             wanted to build a single place where you can get help for building a
             successful club in FM23.
           </p>
-          <div className='grid gap-4 w-full'>
+          <div className='grid sm:grid-cols-2 gap-4 lg:w-1/2'>
             <Card>
               <CardHeader>
                 <CardTitle>

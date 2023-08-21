@@ -40,10 +40,10 @@ function Dashboard() {
                   <CardTitle className='tracking-tight text-sm font-medium'>
                     Players
                   </CardTitle>
-                  <Users color='gray' size={24} />
+                  <Users color='#7c3aed' size={24} />
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className='text-primary text-2xl font-bold'>
+                  <CardDescription className='text-primary text-2xl text-black font-bold'>
                     48
                   </CardDescription>
                 </CardContent>
@@ -53,10 +53,10 @@ function Dashboard() {
                   <CardTitle className='tracking-tight text-sm font-medium'>
                     Salary
                   </CardTitle>
-                  <PoundSterling color='gray' size={24} />
+                  <PoundSterling color='#7c3aed' size={24} />
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className='text-primary text-2xl font-bold'>
+                  <CardDescription className='text-primary text-2xl text-black font-bold'>
                     £57 225,00
                   </CardDescription>
                 </CardContent>
@@ -97,10 +97,10 @@ function Dashboard() {
                   <CardTitle className='tracking-tight text-sm font-medium'>
                     Players
                   </CardTitle>
-                  <Users color='gray' size={24} />
+                  <Users color='#7c3aed' size={24} />
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className='text-primary text-2xl font-bold'>
+                  <CardDescription className='text-primary text-2xl text-black font-bold'>
                     23
                   </CardDescription>
                 </CardContent>
@@ -110,10 +110,10 @@ function Dashboard() {
                   <CardTitle className='tracking-tight text-sm font-medium'>
                     Salary
                   </CardTitle>
-                  <PoundSterling color='gray' size={24} />
+                  <PoundSterling color='#7c3aed' size={24} />
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className='text-primary text-2xl font-bold'>
+                  <CardDescription className='text-primary text-2xl text-black font-bold'>
                     £55 925,00
                   </CardDescription>
                 </CardContent>
@@ -154,10 +154,10 @@ function Dashboard() {
                   <CardTitle className='tracking-tight text-sm font-medium'>
                     Players
                   </CardTitle>
-                  <Users color='gray' size={24} />
+                  <Users color='#7c3aed' size={24} />
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className='text-primary text-2xl font-bold'>
+                  <CardDescription className='text-primary text-2xl text-black font-bold'>
                     25
                   </CardDescription>
                 </CardContent>
@@ -167,10 +167,10 @@ function Dashboard() {
                   <CardTitle className='tracking-tight text-sm font-medium'>
                     Salary
                   </CardTitle>
-                  <PoundSterling color='gray' size={24} />
+                  <PoundSterling color='#7c3aed' size={24} />
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className='text-primary text-2xl font-bold'>
+                  <CardDescription className='text-primary text-2xl text-black font-bold'>
                     £1 300,00
                   </CardDescription>
                 </CardContent>

@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={`${inter.className} theme-violet`}>
         <main className='flex min-h-screen w-full flex-col items-center justify-center p-4 gap-6'>
           <nav className='flex gap-6 border-b pb-4'>
             <a href='/' className='text-sm font-semibold hover:underline'>
