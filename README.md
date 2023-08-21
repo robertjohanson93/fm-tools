@@ -4,7 +4,7 @@
 
 FM Tools is a web app with helpful tools you can use when you play Football Manager.
 
-**Important**
+**Important**<br>
 This app is a work in progress. See the roadmap below for completed features and what's to come.
 
 ## Features
