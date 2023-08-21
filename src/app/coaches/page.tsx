@@ -87,11 +87,11 @@ export default function Coaches() {
     <div className='flex min-h-screen flex-col items-start gap-6'>
       <section>
         <h1 className='scroll-m-20 lg:text-5xl'>Calculate Coaching Stars</h1>
-        <p className='leading-7 [&:not(:first-child)]:mt-6 [&:not(:last-child)]:mb-6 w-2/3'>
+        <p className='leading-7 [&:not(:first-child)]:mt-6 [&:not(:last-child)]:mb-6 2xl:w-2/3'>
           Calculate how many stars your coaches will have when you assign them
           to different training areas.
         </p>
-        <p className='leading-7 [&:not(:first-child)]:mt-6 [&:not(:last-child)]:mb-6 w-2/3'>
+        <p className='leading-7 [&:not(:first-child)]:mt-6 [&:not(:last-child)]:mb-6 2xl:w-2/3'>
           Note: this calculation is currently based on formulas from earlier
           versions of FM. The formulas seemed to change in FM22, so this might
           not be correct. I am currently working on the updated formulas that
