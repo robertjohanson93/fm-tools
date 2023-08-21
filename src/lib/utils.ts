@@ -9,8 +9,7 @@ export function cn(...inputs: Array<ClassValue>) {
 export function getYouthPlayers(data: Array<Player>) {
   return data.filter((item) => {
     return (
-      item.playingTime === 'Youngster' ||
-      item.playingTime === 'Breakthrough Prospect'
+      item.playingTime === 'Youngster' || item.playingTime === 'Future Prospect'
     );
   });
 }
@@ -18,8 +17,7 @@ export function getYouthPlayers(data: Array<Player>) {
 export function getFirstTeamPlayers(data: Array<Player>) {
   return data.filter((item) => {
     return (
-      item.playingTime !== 'Youngster' &&
-      item.playingTime !== 'Breakthrough Prospect'
+      item.playingTime !== 'Youngster' && item.playingTime !== 'Future Prospect'
     );
   });
 }

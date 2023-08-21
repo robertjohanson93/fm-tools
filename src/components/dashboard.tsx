@@ -59,6 +59,9 @@ function Dashboard() {
                   <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
                     £57 225,00
                   </CardDescription>
+                  <CardDescription className='text-xs text-[#16a34a]'>
+                    £7 860,30 under budget
+                  </CardDescription>
                 </CardContent>
               </Card>
             </div>
@@ -67,10 +70,14 @@ function Dashboard() {
                 <TableCaption>Club players</TableCaption>
                 <TableHeader>
                   <TableRow>
-                  <TableHead className='w-[250px]'>Name</TableHead>
+                    <TableHead className='w-[250px]'>Name</TableHead>
                     <TableHead className='w-[250px]'>Position</TableHead>
-                    <TableHead className='w-[250px]'>Agreed Playing Time</TableHead>
-                    <TableHead className='w-[250px] text-right'>Salary (p/w)</TableHead>
+                    <TableHead className='w-[250px]'>
+                      Agreed Playing Time
+                    </TableHead>
+                    <TableHead className='w-[250px] text-right'>
+                      Salary (p/w)
+                    </TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -116,6 +123,105 @@ function Dashboard() {
                   <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
                     £55 925,00
                   </CardDescription>
+                  <CardDescription className='text-xs text-[#16a34a]'>
+                    £9 160,30 under budget
+                  </CardDescription>
+                </CardContent>
+              </Card>
+              <Card className='w-full'>
+                <CardHeader className='p-6 flex flex-row items-center justify-between space-y-0 pb-2'>
+                  <CardTitle className='tracking-tight text-sm font-medium'>
+                    Key Players
+                  </CardTitle>
+                  <Users color='#7c3aed' size={24} />
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
+                    3
+                  </CardDescription>
+                  <CardDescription className='text-xs text-muted-foreground'>
+                    Star Player
+                  </CardDescription>
+                </CardContent>
+              </Card>
+              <Card className='w-full'>
+                <CardHeader className='p-6 flex flex-row items-center justify-between space-y-0 pb-2'>
+                  <CardTitle className='tracking-tight text-sm font-medium'>
+                    Salary
+                  </CardTitle>
+                  <PoundSterling color='#7c3aed' size={24} />
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
+                    £15 950,00
+                  </CardDescription>
+                  <CardDescription className='text-xs text-[#16a34a]'>
+                    £3 575,59 under budget
+                  </CardDescription>
+                </CardContent>
+              </Card>
+              <Card className='w-full'>
+                <CardHeader className='p-6 flex flex-row items-center justify-between space-y-0 pb-2'>
+                  <CardTitle className='tracking-tight text-sm font-medium'>
+                    Important Players
+                  </CardTitle>
+                  <Users color='#7c3aed' size={24} />
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
+                    11
+                  </CardDescription>
+                  <CardDescription className='text-xs text-muted-foreground'>
+                    Important Player, Regular Starter
+                  </CardDescription>
+                </CardContent>
+              </Card>
+              <Card className='w-full'>
+                <CardHeader className='p-6 flex flex-row items-center justify-between space-y-0 pb-2'>
+                  <CardTitle className='tracking-tight text-sm font-medium'>
+                    Salary
+                  </CardTitle>
+                  <PoundSterling color='#7c3aed' size={24} />
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
+                    £25 300,00
+                  </CardDescription>
+                  <CardDescription className='text-xs text-[#dc2626]'>
+                    £5 774,41 over budget
+                  </CardDescription>
+                </CardContent>
+              </Card>
+              <Card className='w-full'>
+                <CardHeader className='p-6 flex flex-row items-center justify-between space-y-0 pb-2'>
+                  <CardTitle className='tracking-tight text-sm font-medium'>
+                    Backup/Squad Players
+                  </CardTitle>
+                  <Users color='#7c3aed' size={24} />
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
+                    9
+                  </CardDescription>
+                  <CardDescription className='text-xs text-muted-foreground'>
+                    Squad Player, Fringe Player, Breakthrough Prospect
+                  </CardDescription>
+                </CardContent>
+              </Card>
+              <Card className='w-full'>
+                <CardHeader className='p-6 flex flex-row items-center justify-between space-y-0 pb-2'>
+                  <CardTitle className='tracking-tight text-sm font-medium'>
+                    Salary
+                  </CardTitle>
+                  <PoundSterling color='#7c3aed' size={24} />
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
+                    £14 675,00
+                  </CardDescription>
+                  <CardDescription className='text-xs text-[#16a34a]'>
+                    £4 850,59 under budget
+                  </CardDescription>
                 </CardContent>
               </Card>
             </div>
@@ -124,10 +230,14 @@ function Dashboard() {
                 <TableCaption>Club players</TableCaption>
                 <TableHeader>
                   <TableRow>
-                  <TableHead className='w-[250px]'>Name</TableHead>
+                    <TableHead className='w-[250px]'>Name</TableHead>
                     <TableHead className='w-[250px]'>Position</TableHead>
-                    <TableHead className='w-[250px]'>Agreed Playing Time</TableHead>
-                    <TableHead className='w-[250px] text-right'>Salary (p/w)</TableHead>
+                    <TableHead className='w-[250px]'>
+                      Agreed Playing Time
+                    </TableHead>
+                    <TableHead className='w-[250px] text-right'>
+                      Salary (p/w)
+                    </TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -173,6 +283,41 @@ function Dashboard() {
                   <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
                     £1 300,00
                   </CardDescription>
+                  <CardDescription className='text-xs text-[#16a34a]'>
+                    £5 208,53 under budget
+                  </CardDescription>
+                </CardContent>
+              </Card>
+              <Card className='w-full'>
+                <CardHeader className='p-6 flex flex-row items-center justify-between space-y-0 pb-2'>
+                  <CardTitle className='tracking-tight text-sm font-medium'>
+                    Youth Prospects
+                  </CardTitle>
+                  <Users color='#7c3aed' size={24} />
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
+                    25
+                  </CardDescription>
+                  <CardDescription className='text-xs text-muted-foreground'>
+                    Future prospect, Youngster
+                  </CardDescription>
+                </CardContent>
+              </Card>
+              <Card className='w-full'>
+                <CardHeader className='p-6 flex flex-row items-center justify-between space-y-0 pb-2'>
+                  <CardTitle className='tracking-tight text-sm font-medium'>
+                    Salary
+                  </CardTitle>
+                  <PoundSterling color='#7c3aed' size={24} />
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
+                    £1 300,00
+                  </CardDescription>
+                  <CardDescription className='text-xs text-[#16a34a]'>
+                    £5 208,53 under budget
+                  </CardDescription>
                 </CardContent>
               </Card>
             </div>
@@ -183,8 +328,12 @@ function Dashboard() {
                   <TableRow>
                     <TableHead className='w-[250px]'>Name</TableHead>
                     <TableHead className='w-[250px]'>Position</TableHead>
-                    <TableHead className='w-[250px]'>Agreed Playing Time</TableHead>
-                    <TableHead className='w-[250px] text-right'>Salary (p/w)</TableHead>
+                    <TableHead className='w-[250px]'>
+                      Agreed Playing Time
+                    </TableHead>
+                    <TableHead className='w-[250px] text-right'>
+                      Salary (p/w)
+                    </TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>

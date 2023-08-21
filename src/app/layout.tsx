@@ -18,21 +18,21 @@ export default function RootLayout({
           <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
             <nav className='flex justify-between items-center w-full border-b pb-4'>
               <div className='flex gap-6'>
-              <a href='/' className='text-sm font-semibold hover:underline'>
-                Start
-              </a>
-              <a
-                href='/coaches'
-                className='text-sm font-semibold hover:underline'
-              >
-                Coaching Stars
-              </a>
-              <a
-                href='/wages'
-                className='text-sm font-semibold hover:underline'
-              >
-                Wage Structure
-              </a>
+                <a href='/' className='text-sm font-semibold hover:underline'>
+                  Start
+                </a>
+                <a
+                  href='/coaches'
+                  className='text-sm font-semibold hover:underline'
+                >
+                  Coaching Stars
+                </a>
+                <a
+                  href='/wages'
+                  className='text-sm font-semibold hover:underline'
+                >
+                  Wage Structure
+                </a>
               </div>
               <div>
                 <ModeToggle />
