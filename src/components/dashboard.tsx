@@ -43,7 +43,7 @@ function Dashboard() {
                   <Users color='#7c3aed' size={24} />
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className='text-primary text-2xl text-black font-bold'>
+                  <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
                     48
                   </CardDescription>
                 </CardContent>
@@ -56,7 +56,7 @@ function Dashboard() {
                   <PoundSterling color='#7c3aed' size={24} />
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className='text-primary text-2xl text-black font-bold'>
+                  <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
                     £57 225,00
                   </CardDescription>
                 </CardContent>
@@ -100,7 +100,7 @@ function Dashboard() {
                   <Users color='#7c3aed' size={24} />
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className='text-primary text-2xl text-black font-bold'>
+                  <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
                     23
                   </CardDescription>
                 </CardContent>
@@ -113,7 +113,7 @@ function Dashboard() {
                   <PoundSterling color='#7c3aed' size={24} />
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className='text-primary text-2xl text-black font-bold'>
+                  <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
                     £55 925,00
                   </CardDescription>
                 </CardContent>
@@ -157,7 +157,7 @@ function Dashboard() {
                   <Users color='#7c3aed' size={24} />
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className='text-primary text-2xl text-black font-bold'>
+                  <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
                     25
                   </CardDescription>
                 </CardContent>
@@ -170,7 +170,7 @@ function Dashboard() {
                   <PoundSterling color='#7c3aed' size={24} />
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className='text-primary text-2xl text-black font-bold'>
+                  <CardDescription className='text-primary text-2xl text-black dark:text-white font-bold'>
                     £1 300,00
                   </CardDescription>
                 </CardContent>

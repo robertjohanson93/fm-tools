@@ -9,13 +9,13 @@ function CoachRow({ label, value }: CoachRowProps): JSX.Element {
   let valueClassName = '';
 
   if (value <= 5) {
-    valueClassName = 'text-gray-500';
+    valueClassName = 'text-[#ffc2ff]';
   } else if (value <= 10) {
-    valueClassName = 'text-black';
+    valueClassName = 'text-[#e092f5]';
   } else if (value <= 15) {
-    valueClassName = 'text-amber-400';
+    valueClassName = 'text-[#b764ef]';
   } else {
-    valueClassName = 'text-green-500';
+    valueClassName = 'text-[#7c3aed]';
   }
 
   return (
