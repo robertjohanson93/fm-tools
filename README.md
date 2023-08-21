@@ -4,10 +4,7 @@
 
 FM Tools is a web app with helpful tools you can use when you play Football Manager.
 
-[!IMPORTANT]<br>
-This app is a work in progress. See the roadmap below for completed features and what's to come.
-
-**Important**<br>
+**Important**
 This app is a work in progress. See the roadmap below for completed features and what's to come.
 
 ## Features
@@ -20,10 +17,7 @@ This app is a work in progress. See the roadmap below for completed features and
 
 ## Note on Performance
 
-[!WARNING]<br>
-This app is using the unstable releases for Next.js 13 and React 18. The new router and app dir is still in beta and not production-ready.
-
-**Important**<br>
+**Warning**<br>
 This app is using the unstable releases for Next.js 13 and React 18. The new router and app dir is still in beta and not production-ready.
 
 ## Roadmap
