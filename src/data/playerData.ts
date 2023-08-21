@@ -1,6 +1,6 @@
 import type { Player } from '@/lib/types';
 
-export const playerData: Player[] = [
+export const playerData: Array<Player> = [
   {
     player: 'Cieran Slicker',
     position: 'GK',

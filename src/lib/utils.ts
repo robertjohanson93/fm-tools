@@ -2,11 +2,11 @@ import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import type { Player } from './types';
 
-export function cn(...inputs: ClassValue[]) {
+export function cn(...inputs: Array<ClassValue>) {
   return twMerge(clsx(inputs));
 }
 
-export function getYouthPlayers(data: Player[]) {
+export function getYouthPlayers(data: Array<Player>) {
   return data.filter((item) => {
     return (
       item.playingTime === 'Youngster' ||
@@ -15,7 +15,7 @@ export function getYouthPlayers(data: Player[]) {
   });
 }
 
-export function getFirstTeamPlayers(data: Player[]) {
+export function getFirstTeamPlayers(data: Array<Player>) {
   return data.filter((item) => {
     return (
       item.playingTime !== 'Youngster' &&
