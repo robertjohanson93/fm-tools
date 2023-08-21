@@ -89,17 +89,11 @@ export default function Coaches() {
         <h1 className='scroll-m-20 lg:text-5xl'>Calculate Coaching Stars</h1>
         <p className='leading-7 [&:not(:first-child)]:mt-6 [&:not(:last-child)]:mb-6 2xl:w-2/3'>
           Calculate how many stars your coaches will have when you assign them
-          to different training areas.
-        </p>
-        <p className='leading-7 [&:not(:first-child)]:mt-6 [&:not(:last-child)]:mb-6 2xl:w-2/3'>
+          to different training areas. <br />
           Note: this calculation is currently based on formulas from earlier
-          versions of FM. The formulas seemed to change in FM22, so this might
-          not be correct. I am currently working on the updated formulas that
-          work in FM23. <br />
-          The formulas for defending, attacking and fitness coaches seem to
-          match fairly well. However the formulas for goalkeeping and possession
-          needs tweaking to show the correct amount of stars relative to the
-          game.
+          versions of FM. The formulas changed in FM22, so every category
+          display the correct star rating. I am currently working on the updated
+          formulas that work in FM23.
         </p>
       </section>
       <section className='grid grid-cols-1 2xl:grid-cols-2 gap-4 w-full'>

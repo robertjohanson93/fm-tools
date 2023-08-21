@@ -27,7 +27,7 @@ export default function Home() {
           enhance a Football Manager save. After growing tired of the different
           options and long lists not optimized for your club, I wanted to build
           a single place where you can get help for building a successful club
-          in FM23.
+          in your FM save.
         </p>
       </section>
       <section className='grid sm:grid-cols-2 gap-4 xl:w-1/2'>
