@@ -34,7 +34,7 @@ function Dashboard() {
             <TabsTrigger value='youth-team'>Youth Team</TabsTrigger>
           </TabsList>
           <TabsContent value='club' className='space-y-4'>
-            <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
+            <div className='grid gap-4 md:grid-cols-2'>
               <Card className='w-full'>
                 <CardHeader className='p-6 flex flex-row items-center justify-between space-y-0 pb-2'>
                   <CardTitle className='tracking-tight text-sm font-medium'>
@@ -67,10 +67,10 @@ function Dashboard() {
                 <TableCaption>Club players</TableCaption>
                 <TableHeader>
                   <TableRow>
-                    <TableHead className='w-[200px]'>Name</TableHead>
-                    <TableHead>Position</TableHead>
-                    <TableHead>Agreed Playing Time</TableHead>
-                    <TableHead className='text-right'>Salary (p/w)</TableHead>
+                  <TableHead className='w-[250px]'>Name</TableHead>
+                    <TableHead className='w-[250px]'>Position</TableHead>
+                    <TableHead className='w-[250px]'>Agreed Playing Time</TableHead>
+                    <TableHead className='w-[250px] text-right'>Salary (p/w)</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -91,7 +91,7 @@ function Dashboard() {
             </div>
           </TabsContent>
           <TabsContent value='first-team' className='space-y-4'>
-            <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
+            <div className='grid gap-4 md:grid-cols-2'>
               <Card className='w-full'>
                 <CardHeader className='p-6 flex flex-row items-center justify-between space-y-0 pb-2'>
                   <CardTitle className='tracking-tight text-sm font-medium'>
@@ -124,10 +124,10 @@ function Dashboard() {
                 <TableCaption>Club players</TableCaption>
                 <TableHeader>
                   <TableRow>
-                    <TableHead className='w-[200px]'>Name</TableHead>
-                    <TableHead>Position</TableHead>
-                    <TableHead>Agreed Playing Time</TableHead>
-                    <TableHead className='text-right'>Salary (p/w)</TableHead>
+                  <TableHead className='w-[250px]'>Name</TableHead>
+                    <TableHead className='w-[250px]'>Position</TableHead>
+                    <TableHead className='w-[250px]'>Agreed Playing Time</TableHead>
+                    <TableHead className='w-[250px] text-right'>Salary (p/w)</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -148,7 +148,7 @@ function Dashboard() {
             </div>
           </TabsContent>
           <TabsContent value='youth-team' className='space-y-4'>
-            <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
+            <div className='grid gap-4 md:grid-cols-2'>
               <Card className='w-full'>
                 <CardHeader className='p-6 flex flex-row items-center justify-between space-y-0 pb-2'>
                   <CardTitle className='tracking-tight text-sm font-medium'>
@@ -181,10 +181,10 @@ function Dashboard() {
                 <TableCaption>Youth team players</TableCaption>
                 <TableHeader>
                   <TableRow>
-                    <TableHead className='w-[200px]'>Name</TableHead>
-                    <TableHead>Position</TableHead>
-                    <TableHead>Agreed Playing Time</TableHead>
-                    <TableHead className='text-right'>Salary (p/w)</TableHead>
+                    <TableHead className='w-[250px]'>Name</TableHead>
+                    <TableHead className='w-[250px]'>Position</TableHead>
+                    <TableHead className='w-[250px]'>Agreed Playing Time</TableHead>
+                    <TableHead className='w-[250px] text-right'>Salary (p/w)</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
