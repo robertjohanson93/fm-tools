@@ -47,4 +47,4 @@ To install and run FM Tools on your local machine, follow these steps:
 
 ## License
 
-Licensed under the [MIT license](https://github.com/robertjohanson93/fm-tools/blob/main/LICENSE.md).
+Licensed under the [MIT license](https://github.com/robertjohanson93/fm-tools/blob/main/LICENSE).
