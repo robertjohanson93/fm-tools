@@ -11,18 +11,12 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Calculator, RefreshCw } from 'lucide-react';
+import { Minus, Plus } from 'lucide-react';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
-type CoachingRatingsState = Record<string, number>;
-type CoachingValuesState = Record<string, number>;
-
 type CoachFormProps = {
-  coachingRating: CoachingRatingsState;
-  updateCoachingRating: (key: string, value: number) => void;
-  coachingValues: CoachingValuesState;
   updateCoachingValues: (key: string, value: number) => void;
 };
 
@@ -57,12 +51,7 @@ const formSchema = z.object({
   shotStopping: z.number().min(1).max(20)
 });
 
-function CoachForm({
-  coachingRating,
-  updateCoachingRating,
-  coachingValues,
-  updateCoachingValues
-}: CoachFormProps) {
+function CoachForm({ updateCoachingValues }: CoachFormProps) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -87,7 +76,6 @@ function CoachForm({
         const value = values[key];
         updateCoachingValues(key, value);
       }
-      console.log('Coaching values updated successfully!');
     } catch (error) {
       console.error('Failed to update coaching values:', error);
     }
@@ -99,7 +87,7 @@ function CoachForm({
         onSubmit={form.handleSubmit(onSubmit)}
         className='p-4 md:p-8 space-y-8 rounded-[0.5rem] border bg-background shadow'
       >
-        <div className='grid grid-cols-2 gap-4'>
+        <div className='grid grid-cols-2'>
           <div className='grid gap-2'>
             <h3 className='scroll-m-20 text-lg md:text-2xl'>Coaching</h3>
             <FormField
@@ -109,13 +97,36 @@ function CoachForm({
                 <FormItem>
                   <FormLabel>Attacking</FormLabel>
                   <FormControl>
-                    <Input
-                      type='number'
-                      min={1}
-                      max={20}
-                      {...field}
-                      onChange={(event) => field.onChange(+event.target.value)}
-                    />
+                    <div className='flex gap-2 items-center'>
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.max(field.value - 1, 1))
+                        }
+                      >
+                        <Minus className='h-4 w-4' />
+                      </Button>
+                      <Input
+                        className='mx-2 w-11'
+                        type='number'
+                        min={1}
+                        max={20}
+                        {...field}
+                        onChange={(event) =>
+                          field.onChange(+event.target.value)
+                        }
+                      />
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.min(field.value + 1, 20))
+                        }
+                      >
+                        <Plus className='h-8 w-4' />
+                      </Button>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -128,13 +139,36 @@ function CoachForm({
                 <FormItem>
                   <FormLabel>Defending</FormLabel>
                   <FormControl>
-                    <Input
-                      type='number'
-                      min={1}
-                      max={20}
-                      {...field}
-                      onChange={(event) => field.onChange(+event.target.value)}
-                    />
+                    <div className='flex gap-2 items-center'>
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.max(field.value - 1, 1))
+                        }
+                      >
+                        <Minus className='h-4 w-4' />
+                      </Button>
+                      <Input
+                        className='mx-2 w-11'
+                        type='number'
+                        min={1}
+                        max={20}
+                        {...field}
+                        onChange={(event) =>
+                          field.onChange(+event.target.value)
+                        }
+                      />
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.min(field.value + 1, 20))
+                        }
+                      >
+                        <Plus className='h-8 w-4' />
+                      </Button>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -147,13 +181,36 @@ function CoachForm({
                 <FormItem>
                   <FormLabel>Fitness</FormLabel>
                   <FormControl>
-                    <Input
-                      type='number'
-                      min={1}
-                      max={20}
-                      {...field}
-                      onChange={(event) => field.onChange(+event.target.value)}
-                    />
+                    <div className='flex gap-2 items-center'>
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.max(field.value - 1, 1))
+                        }
+                      >
+                        <Minus className='h-4 w-4' />
+                      </Button>
+                      <Input
+                        className='mx-2 w-11'
+                        type='number'
+                        min={1}
+                        max={20}
+                        {...field}
+                        onChange={(event) =>
+                          field.onChange(+event.target.value)
+                        }
+                      />
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.min(field.value + 1, 20))
+                        }
+                      >
+                        <Plus className='h-8 w-4' />
+                      </Button>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -166,13 +223,36 @@ function CoachForm({
                 <FormItem>
                   <FormLabel>Mental</FormLabel>
                   <FormControl>
-                    <Input
-                      type='number'
-                      min={1}
-                      max={20}
-                      {...field}
-                      onChange={(event) => field.onChange(+event.target.value)}
-                    />
+                    <div className='flex gap-2 items-center'>
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.max(field.value - 1, 1))
+                        }
+                      >
+                        <Minus className='h-4 w-4' />
+                      </Button>
+                      <Input
+                        className='mx-2 w-11'
+                        type='number'
+                        min={1}
+                        max={20}
+                        {...field}
+                        onChange={(event) =>
+                          field.onChange(+event.target.value)
+                        }
+                      />
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.min(field.value + 1, 20))
+                        }
+                      >
+                        <Plus className='h-8 w-4' />
+                      </Button>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -185,13 +265,36 @@ function CoachForm({
                 <FormItem>
                   <FormLabel>Tactical</FormLabel>
                   <FormControl>
-                    <Input
-                      type='number'
-                      min={1}
-                      max={20}
-                      {...field}
-                      onChange={(event) => field.onChange(+event.target.value)}
-                    />
+                    <div className='flex grow-0 gap-2 items-center'>
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.max(field.value - 1, 1))
+                        }
+                      >
+                        <Minus className='h-4 w-4' />
+                      </Button>
+                      <Input
+                        className='mx-2 w-11'
+                        type='number'
+                        min={1}
+                        max={20}
+                        {...field}
+                        onChange={(event) =>
+                          field.onChange(+event.target.value)
+                        }
+                      />
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.min(field.value + 1, 20))
+                        }
+                      >
+                        <Plus className='h-8 w-4' />
+                      </Button>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -204,13 +307,36 @@ function CoachForm({
                 <FormItem>
                   <FormLabel>Technical</FormLabel>
                   <FormControl>
-                    <Input
-                      type='number'
-                      min={1}
-                      max={20}
-                      {...field}
-                      onChange={(event) => field.onChange(+event.target.value)}
-                    />
+                    <div className='flex gap-2 items-center'>
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.max(field.value - 1, 1))
+                        }
+                      >
+                        <Minus className='h-4 w-4' />
+                      </Button>
+                      <Input
+                        className='mx-2 w-11'
+                        type='number'
+                        min={1}
+                        max={20}
+                        {...field}
+                        onChange={(event) =>
+                          field.onChange(+event.target.value)
+                        }
+                      />
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.min(field.value + 1, 20))
+                        }
+                      >
+                        <Plus className='h-8 w-4' />
+                      </Button>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -226,13 +352,36 @@ function CoachForm({
                 <FormItem>
                   <FormLabel>Determination</FormLabel>
                   <FormControl>
-                    <Input
-                      type='number'
-                      min={1}
-                      max={20}
-                      {...field}
-                      onChange={(event) => field.onChange(+event.target.value)}
-                    />
+                    <div className='flex gap-2 items-center'>
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.max(field.value - 1, 1))
+                        }
+                      >
+                        <Minus className='h-4 w-4' />
+                      </Button>
+                      <Input
+                        className='mx-2 w-11'
+                        type='number'
+                        min={1}
+                        max={20}
+                        {...field}
+                        onChange={(event) =>
+                          field.onChange(+event.target.value)
+                        }
+                      />
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.min(field.value + 1, 20))
+                        }
+                      >
+                        <Plus className='h-8 w-4' />
+                      </Button>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -245,13 +394,36 @@ function CoachForm({
                 <FormItem>
                   <FormLabel>Level of Discipline</FormLabel>
                   <FormControl>
-                    <Input
-                      type='number'
-                      min={1}
-                      max={20}
-                      {...field}
-                      onChange={(event) => field.onChange(+event.target.value)}
-                    />
+                    <div className='flex gap-2 items-center'>
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.max(field.value - 1, 1))
+                        }
+                      >
+                        <Minus className='h-4 w-4' />
+                      </Button>
+                      <Input
+                        className='mx-2 w-11'
+                        type='number'
+                        min={1}
+                        max={20}
+                        {...field}
+                        onChange={(event) =>
+                          field.onChange(+event.target.value)
+                        }
+                      />
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.min(field.value + 1, 20))
+                        }
+                      >
+                        <Plus className='h-8 w-4' />
+                      </Button>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -264,13 +436,36 @@ function CoachForm({
                 <FormItem>
                   <FormLabel>Motivating</FormLabel>
                   <FormControl>
-                    <Input
-                      type='number'
-                      min={1}
-                      max={20}
-                      {...field}
-                      onChange={(event) => field.onChange(+event.target.value)}
-                    />
+                    <div className='flex gap-2 items-center'>
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.max(field.value - 1, 1))
+                        }
+                      >
+                        <Minus className='h-4 w-4' />
+                      </Button>
+                      <Input
+                        className='mx-2 w-11'
+                        type='number'
+                        min={1}
+                        max={20}
+                        {...field}
+                        onChange={(event) =>
+                          field.onChange(+event.target.value)
+                        }
+                      />
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.min(field.value + 1, 20))
+                        }
+                      >
+                        <Plus className='h-8 w-4' />
+                      </Button>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -283,13 +478,36 @@ function CoachForm({
                 <FormItem>
                   <FormLabel>GK (Distribution)</FormLabel>
                   <FormControl>
-                    <Input
-                      type='number'
-                      min={1}
-                      max={20}
-                      {...field}
-                      onChange={(event) => field.onChange(+event.target.value)}
-                    />
+                    <div className='flex gap-2 items-center'>
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.max(field.value - 1, 1))
+                        }
+                      >
+                        <Minus className='h-4 w-4' />
+                      </Button>
+                      <Input
+                        className='mx-2 w-11'
+                        type='number'
+                        min={1}
+                        max={20}
+                        {...field}
+                        onChange={(event) =>
+                          field.onChange(+event.target.value)
+                        }
+                      />
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.min(field.value + 1, 20))
+                        }
+                      >
+                        <Plus className='h-8 w-4' />
+                      </Button>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -302,13 +520,36 @@ function CoachForm({
                 <FormItem>
                   <FormLabel>GK (Handling)</FormLabel>
                   <FormControl>
-                    <Input
-                      type='number'
-                      min={1}
-                      max={20}
-                      {...field}
-                      onChange={(event) => field.onChange(+event.target.value)}
-                    />
+                    <div className='flex gap-2 items-center'>
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.max(field.value - 1, 1))
+                        }
+                      >
+                        <Minus className='h-4 w-4' />
+                      </Button>
+                      <Input
+                        className='mx-2 w-11'
+                        type='number'
+                        min={1}
+                        max={20}
+                        {...field}
+                        onChange={(event) =>
+                          field.onChange(+event.target.value)
+                        }
+                      />
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.min(field.value + 1, 20))
+                        }
+                      >
+                        <Plus className='h-8 w-4' />
+                      </Button>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -321,13 +562,36 @@ function CoachForm({
                 <FormItem>
                   <FormLabel>GK (Shot stopping)</FormLabel>
                   <FormControl>
-                    <Input
-                      type='number'
-                      min={1}
-                      max={20}
-                      {...field}
-                      onChange={(event) => field.onChange(+event.target.value)}
-                    />
+                    <div className='flex gap-2 items-center'>
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.max(field.value - 1, 1))
+                        }
+                      >
+                        <Minus className='h-4 w-4' />
+                      </Button>
+                      <Input
+                        className='mx-2 w-11'
+                        type='number'
+                        min={1}
+                        max={20}
+                        {...field}
+                        onChange={(event) =>
+                          field.onChange(+event.target.value)
+                        }
+                      />
+                      <Button
+                        variant='outline'
+                        size='icon'
+                        onClick={() =>
+                          field.onChange(Math.min(field.value + 1, 20))
+                        }
+                      >
+                        <Plus className='h-8 w-4' />
+                      </Button>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -335,10 +599,6 @@ function CoachForm({
             />
           </div>
         </div>
-        <Button type='submit'>
-          <RefreshCw size={16} />
-          <span className='ml-2'>Calculate</span>
-        </Button>
       </form>
     </Form>
   );

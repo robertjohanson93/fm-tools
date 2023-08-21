@@ -104,12 +104,7 @@ export default function Coaches() {
       </section>
       <section className='grid grid-cols-1 2xl:grid-cols-2 gap-4 w-full'>
         <div className='flex flex-col gap-6'>
-          <CoachForm
-            coachingRating={coachingRating}
-            updateCoachingRating={updateCoachingRating}
-            coachingValues={coachingValues}
-            updateCoachingValues={updateCoachingValues}
-          />
+          <CoachForm updateCoachingValues={updateCoachingValues} />
         </div>
         <div className='flex flex-col gap-6'>
           <CoachCard
