@@ -2,21 +2,36 @@
 
 ## Description
 
-FM Tools is a web app with helpful tools you can use when you play Football Manager. This is a work in progress...
+FM Tools is a web app with helpful tools you can use when you play Football Manager.
+
+**Warning**
+This app is a work in progress. See the roadmap below for completed features and what's to come.
 
 ## Features
 
-- **Next.js**: The project is built with Next.js to enable server-side rendering and optimize performance.
-- **TypeScript**: The project utilizes TypeScript for static typing and enhanced code quality.
-- **Tailwind CSS**: Tailwind CSS is adopted as the CSS framework for robust and customizable styling.
-- **ESLint**: ESLint is used to enforce code consistency and catch potential errors or code smells.
-- **Shadcn UI**: Shadcn UI provides a set of UI components to facilitate the development of interactive and visually appealing user interfaces.
+- Built using **Next.js 13**
+- Written in **TypeScript**
+- Styled using **Tailwind CSS**
+- UI Components from [Shadcn UI](https://ui.shadcn.com/)
+
+## Note on Performance
+
+**Warning**
+This app is using the unstable releases for Next.js 13 and React 18. The new router and app dir is still in beta and not production-ready. 
 
 ## Roadmap
 
-- [ ] **Calculate coach stars**: Calculate how many stars your coach will have in training.
-- [ ] **Wage structure overview**: Export a view from FM23, upload the file to this website, get a nice overview of your club wages based on contract lengths, promised playing time etc.
-- [ ] **TBD**
+- Calculate coach stars
+- [x] ~~Formulas from versions before FM22 added~~
+- [ ] Review formulas for gk training and possession training
+- [ ] Import a view with multiple coaches and compare them
+
+- Wage structure overview
+- [ ] Dashboard for a nice overview of the wage structure (club/first team/youth team)
+- [ ] Import a view with your current squad
+- [ ] Select your own wage structure other than the current 30-30-30-10
+
+- **TBD**
 
 ## Installation
 
@@ -29,3 +44,7 @@ To install and run FM Tools on your local machine, follow these steps:
 5. Open your web browser and visit `http://localhost:3000`
 
 **Happy football managing!**
+
+## License
+
+Licensed under the [MIT license](https://github.com/robertjohanson93/fm-tools/blob/main/LICENSE.md).
