@@ -1,10 +1,22 @@
 'use client';
-import { Banknote, Menu, Sparkles } from 'lucide-react';
-import React, { useState } from 'react';
+import { Banknote, Menu, Sparkles, X } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 import { ModeToggle } from './mode-toggle';
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isOpen]);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -24,8 +36,12 @@ function Sidebar() {
                 type='button'
                 className='inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
               >
-                <span className='sr-only'>Open sidebar</span>
-                <Menu className='text-black dark:text-white' />
+                <span className='sr-only'>{isOpen ? 'Close sidebar' : 'Open sidebar'}</span>
+                {isOpen ? (
+                  <X className='text-black dark:text-white' />
+                  ) : (
+                  <Menu className='text-black dark:text-white' />
+                )}
               </button>
               <a href='/' className='flex ml-2 md:mr-24'>
                 <span className='self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white'>
