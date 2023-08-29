@@ -21,3 +21,22 @@ export function getFirstTeamPlayers(data: Array<Player>) {
     );
   });
 }
+
+export function getTotalSalary(data: Array<Player>): string {
+  let totalSalary = 0;
+
+  for (const player of data) {
+    const cleanedSalary = player.salary
+      .replace(/[^0-9.,]/g, '')
+      .replace(/,/g, '')
+      .replace(/\./g, '');
+
+    const parsedSalary = parseFloat(cleanedSalary);
+
+    if (!isNaN(parsedSalary)) {
+      totalSalary += parsedSalary;
+    }
+  }
+
+  return totalSalary.toLocaleString();
+}
