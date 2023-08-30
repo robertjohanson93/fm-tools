@@ -1,7 +1,6 @@
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -30,7 +29,7 @@ function Dashboard() {
         <TabsTrigger value='first-team'>First Team</TabsTrigger>
         <TabsTrigger value='youth-team'>Youth Team</TabsTrigger>
       </TabsList>
-      <TabsContent value='club' className='space-y-4'>
+      <TabsContent value='club' className='space-y-4 mt-4'>
         <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
           <Card>
             <CardHeader className='p-6 flex flex-row items-center justify-between space-y-0'>
@@ -90,9 +89,9 @@ function Dashboard() {
         <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-7'>
           <Card className='col-span-4'>
             <CardHeader>
-              <CardTitle>Overview</CardTitle>
+              <CardTitle>Salary overall</CardTitle>
             </CardHeader>
-            <CardContent className='pl-2'>
+            <CardContent>
               <Overview />
             </CardContent>
           </Card>

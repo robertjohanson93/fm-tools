@@ -1,71 +1,93 @@
 'use client';
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Legend,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis
+} from 'recharts';
 
-import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts';
-
-const data = [
-  { name: 'Group A', value: 400 },
-  { name: 'Group B', value: 300 },
-  { name: 'Group C', value: 300 },
-  { name: 'Group D', value: 200 }
+const barChartData = [
+  {
+    name: 'Key Players',
+    total: 30,
+    current: 25
+  },
+  {
+    name: 'Important Players',
+    total: 30,
+    current: 45
+  },
+  {
+    name: 'Squad Players',
+    total: 30,
+    current: 18
+  },
+  {
+    name: 'Youth Players',
+    total: 10,
+    current: 1
+  }
 ];
-
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
-
-const RADIAN = Math.PI / 180;
-
-const renderCustomizedLabel = ({
-  cx,
-  cy,
-  midAngle,
-  innerRadius,
-  outerRadius,
-  percent,
-  index
-}: {
-  cx: any;
-  cy: any;
-  midAngle: any;
-  innerRadius: any;
-  outerRadius: any;
-  percent: any;
-  index: any;
-}): JSX.Element => {
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-  return (
-    <text
-      x={x}
-      y={y}
-      fill='white'
-      textAnchor={x > cx ? 'start' : 'end'}
-      dominantBaseline='central'
-    >
-      {`${(percent * 100).toFixed(0)}%`}
-    </text>
-  );
-};
 
 export function Overview() {
   return (
-    <ResponsiveContainer width='100%' height={350}>
-      <PieChart width={400} height={400}>
-        <Pie
-          data={data}
-          cx='50%'
-          cy='50%'
-          labelLine={false}
-          label={renderCustomizedLabel}
-          outerRadius={80}
-          fill='#8884d8'
-          dataKey='value'
+    <>
+      {/* <ResponsiveContainer width='99%' aspect={2.25}>
+      <BarChart data={barChartData}>
+        <XAxis
+          dataKey='name'
+          stroke='#888888'
+          fontSize={12}
+          tickLine={false}
+          axisLine={false}
+        />
+        <YAxis
+          stroke='#888888'
+          fontSize={12}
+          tickLine={false}
+          axisLine={false}
+          tickFormatter={(value) => `${value}%`}
+        />
+        <Bar dataKey='total' fill='#e11d48' radius={[4, 4, 0, 0]} />
+        <Bar dataKey='current' fill='#7c3aed' radius={[4, 4, 0, 0]} />
+      </BarChart>
+    </ResponsiveContainer> */}
+      <ResponsiveContainer width='100%' height='100%'>
+        <BarChart
+          width={500}
+          height={300}
+          data={barChartData}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 20,
+            bottom: 5
+          }}
         >
-          {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-          ))}
-        </Pie>
-      </PieChart>
-    </ResponsiveContainer>
+          <XAxis
+            dataKey='name'
+            stroke='#888888'
+            fontSize={12}
+            tickLine={false}
+            axisLine={false}
+          />
+          <YAxis
+            stroke='#888888'
+            fontSize={12}
+            tickLine={false}
+            axisLine={false}
+            tickFormatter={(value) => `${value}%`}
+          />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey='current' stackId='a' fill='#7c3aed' />
+          <Bar dataKey='total' stackId='a' fill='#e11d48' />
+        </BarChart>
+      </ResponsiveContainer>
+    </>
   );
 }
